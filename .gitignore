@@ -4,6 +4,8 @@
 /storage/*.key
 /vendor
 /Template-materialize-Clinic
+/DB
+/Plantilla-SisVentas
 .env
 .env.backup
 .phpunit.result.cache
