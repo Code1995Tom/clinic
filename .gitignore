@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/Template-materialize-Clinic
 .env
 .env.backup
 .phpunit.result.cache

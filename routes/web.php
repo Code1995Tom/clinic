@@ -12,11 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes(['verify' => true]);
+//BACKOFFICE
+Route::group(['middleware'=>['auth'], 'as'=>'backoffice.'], function(){
+    Route::resource('role', 'App\Http\Controllers\RoleController');
 });
 
-Auth::routes(['verify' => true]);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return view('theme.backoffice.layouts.admin');
+});
