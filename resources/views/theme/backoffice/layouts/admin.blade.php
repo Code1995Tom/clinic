@@ -13,7 +13,7 @@
         <section id="content">
           <div class="container">
             @yield('content')
-          </dvi>
+          </div>
         </section>
       </div>
     </div>

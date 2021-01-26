@@ -1,6 +1,6 @@
 @extends('theme.backoffice.layouts.admin')
 
-@section('title','Crear rol')
+@section('title','Editar rol: '. $role->name )
 
 @section('head')
 
@@ -8,18 +8,20 @@
 
 @section('content')
 <div class="section">
-    <p class="caption">Introduce los datos para crear un nuevo rol</p>
+    <p class="caption">Edicion de rol: {{$role->name}}  </p>
     <div class="divider"></div>
         <div id="basic-form" class="section">
             <div class="row">
                 <div class="col s12 m8 offset-m2">
                     <div class="card-panel">
-                    <h4 class="header2">Crear rol</h4>
+                    <h4 class="header2">Editar rol</h4>
                         <div class="row">
                         
-                            <form class="col s12" method="post" action="{{ route('backoffice.role.store') }}">
+                            <form class="col s12" method="post" action="{{ route('backoffice.role.update', $role) }}">
 
                                 {{ csrf_field() }}
+
+                                {{ method_field('PUT') }}
 
                                 <div class="row">
                                     @error('name')
@@ -28,7 +30,7 @@
                                         </span>
                                     @enderror
                                     <div class="input-field col s12">
-                                        <input id="name" type="text" name="name">
+                                        <input id="name" type="text" name="name" value="{{$role->name}}">
                                         <label for="name">Nombre</label>
                                     </div>
                                 </div>
@@ -39,13 +41,13 @@
                                         </span>
                                     @enderror
                                     <div class="input-field col s12">
-                                        <textarea name="description" class="materialize-textarea" id="description" cols="30" rows="10"></textarea>
+                                        <textarea name="description" class="materialize-textarea" id="description" cols="30" rows="10">{{$role->description}}</textarea>
                                         <label for="email">Descripcion</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn waves-effect waves-light right" type="submit">Guardar
+                                            <button class="btn waves-effect waves-light right" type="submit">Actualizar
                                                 <i class="material-icons right">send</i>
                                             </button>
                                         </div>

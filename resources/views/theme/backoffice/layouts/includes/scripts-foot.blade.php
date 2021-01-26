@@ -3,5 +3,5 @@
 <script src="{{asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 <script src="{{asset('assets/backoffice/js/plugins.js')}}"></script>
 <script src="{{asset('assets/backoffice/js/custom-script.js')}}"></script>
-
+@include('sweetalert::alert')
 @yield('scripts-foot')

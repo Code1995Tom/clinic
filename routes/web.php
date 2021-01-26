@@ -16,8 +16,5 @@ Auth::routes(['verify' => true]);
 //BACKOFFICE
 Route::group(['middleware'=>['auth'], 'as'=>'backoffice.'], function(){
     Route::resource('role', 'App\Http\Controllers\RoleController');
-});
+    });
 
-Route::get('/', function(){
-    return view('theme.backoffice.layouts.admin');
-});
