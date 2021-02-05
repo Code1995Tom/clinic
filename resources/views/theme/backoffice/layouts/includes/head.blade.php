@@ -3,10 +3,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="msapplication-tap-highlight" content="no">
 
+
 <link href="{{asset('assets/backoffice/css/materialize.css')}}" rel="stylesheet">
 <link href="{{asset('assets/backoffice/css/style.css')}}" rel="stylesheet">
 <link href="{{asset('assets/backoffice/css/custom.css')}}" type="text/css" rel="stylesheet">
 <link href="{{asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet">
 <link href="{{asset('assets/vendors/flag-icon/css/flag-icon.min.css')}}" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 @yield('head')

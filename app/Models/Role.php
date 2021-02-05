@@ -28,7 +28,7 @@ class Role extends Model
     public function store($request)
     {
         $slug = str_slug($request->name,'-');
-        toast('Rol guardado', 'success','top-right')->width('200px')->showConfirmButton();
+        //toast('Rol guardado', 'success','top-right')->width('200px')->showConfirmButton();
          return self::create($request->all() + [
             'slug' => $slug,
         ]);
