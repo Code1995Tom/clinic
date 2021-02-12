@@ -6,6 +6,14 @@
 
 @endsection
 
+@section('breadcrums')
+
+    <li><a href="{{route('backoffice.role.index')}}"> Roles del sistema</a></li>
+    <li><a href="{{route('backoffice.role.show', $role)}}">{{$role->name}}</a></li>
+    <li>Edicion de rol</li>
+    
+@endsection
+
 @section('content')
 <div class="section">
     <p class="caption">Edicion de rol: {{$role->name}}  </p>
@@ -47,7 +55,7 @@
                                 </div>
                                 <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn waves-effect waves-light right" type="submit">Actualizar
+                                            <button class="btn waves-effect waves-light right" type="submit" onclick="rolUpdate()">Actualizar
                                                 <i class="material-icons right">send</i>
                                             </button>
                                         </div>
@@ -63,5 +71,13 @@
 @endsection
 
 @section('scripts-foot')
-
+<script>
+    function rolUpdate(){
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se ha actualizado el rol exitosamente',
+        })
+    }
+</script>
 @endsection

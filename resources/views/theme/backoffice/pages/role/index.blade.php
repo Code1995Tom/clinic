@@ -6,6 +6,14 @@
 
 @endsection
 
+@section('breadcrums')
+    <li><a href="{{route('backoffice.role.index')}}"> Roles del sistema</a></li>
+@endsection
+
+@section('dropdown_settings')
+    <li><a href="{{route('backoffice.role.create')}}" class="grey-text text-darken-2">Crear role</a></li>
+@endsection
+
 @section('content')
 <div class="section">
     <p class="caption"><strong>Roles del sistema</strong></p>
