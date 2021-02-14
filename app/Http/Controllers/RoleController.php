@@ -40,8 +40,9 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRequest $request, Role $role)
+    public function store(StoreRequest $request)
     {   
+        $role = new Role;
         $role = $role->store($request);
         return redirect()->route('backoffice.role.show', [
             'role' => $role, 

@@ -25,4 +25,15 @@ class Permission extends Model
     {
         return $this->belongsToMany('App\Models\User')->withTimestamps();
     }
+
+    //ALMACENAMIENTO
+
+    public function store($request)
+    {
+        $slug = str_slug($request->name,'-');
+        //El alerta en la vista show
+        return self::create($request->all() + [
+            'slug' => $slug
+        ]);
+    }
 }
