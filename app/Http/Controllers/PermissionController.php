@@ -16,7 +16,9 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        return view('theme.backoffice.pages.permission.index', [
+            'permissions' => Permission::all()
+        ]);
     }
 
     /**
