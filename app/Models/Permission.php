@@ -36,4 +36,13 @@ class Permission extends Model
             'slug' => $slug
         ]);
     }
+
+    public function my_update($request)
+    {
+        $slug = str_slug($request->name, '-');
+        self::update($request->all() + [
+            'slug' =>$slug,
+        ]);
+        //No olvidarse del alerta de actualizacion.
+    }
 }

@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="row">
                                         <div class="input-field col s12">
-                                            <button class="btn waves-effect waves-light right" type="submit" onclick="rolCreado()">Guardar
+                                            <button class="btn waves-effect waves-light right" type="submit" onclick="roleCreate()">Guardar
                                                 <i class="material-icons right">send</i>
                                             </button>
                                         </div>
@@ -80,4 +80,13 @@
 @endsection
 
 @section('scripts-foot')
+<script>
+    function roleCreate(){
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se ha creado el permiso exitosamente',
+        })
+    }
+</script>
 @endsection

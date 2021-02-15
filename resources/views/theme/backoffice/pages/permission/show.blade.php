@@ -16,7 +16,7 @@
 
 @section('content')
 <div class="section">
-    <p class="caption"><strong>Rol: </strong>{{$permission->name}}</p>
+    <p class="caption"><strong>Permiso: </strong>{{$permission->name}}</p>
     <div class="divider"></div>
         <div id="basic-form" class="section">
             <div class="row">
