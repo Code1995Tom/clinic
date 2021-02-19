@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('theme.backoffice.layouts.admin');
+        return view('home');
     }
 }

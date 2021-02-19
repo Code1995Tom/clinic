@@ -12,7 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+Route::get('/', function(){
+    return view('welcome');
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Auth::routes(['verify' => true]);
+
 //BACKOFFICE
 Route::group(['middleware'=>['auth'], 'as'=>'backoffice.'], function(){
     Route::resource('user', 'App\Http\Controllers\UserController');
@@ -27,4 +37,6 @@ Route::group(['middleware'=>['auth'], 'as'=>'backoffice.'], function(){
     
    
 });
+
+
 

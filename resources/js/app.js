@@ -5,9 +5,8 @@
  */
 
 require('./bootstrap');
-window.Swal = require('sweetalert2');
-window.Vue = require('vue').default;
 
+window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your

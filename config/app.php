@@ -4,6 +4,8 @@ return [
 
     "admin_role" => env('ADMIN_ROLE', 'admin'),
 
+    "patient_role" => env('PATIENT_ROLE', 'paciente'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
