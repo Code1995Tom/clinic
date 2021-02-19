@@ -8,7 +8,6 @@
             <div class="col s10 m6 l6">
                 <h5 class="breadcrumbs-title">@yield('title')</h5>
                 <ol class="breadcrumbs">
-                    <li><a href="#">Panel de administracion</a></li> 
                         @yield('breadcrums')
                 </ol>
             </div>

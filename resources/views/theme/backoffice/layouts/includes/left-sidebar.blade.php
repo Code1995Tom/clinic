@@ -32,10 +32,14 @@
     </li>
     <li class="no-padding">
         <ul class="collapsible" data-collapsible="accordion">
-        <li class="bold">
-            <a href="#" class="waves-effect waves-cyan">
+        <li class="bold" style="margin-left: 10px; font-weight: bold; background: white !important">
                 <i class="material-icons">pie_chart_outlined</i>
                 <span class="nav-text">Panel de administracion</span>
+        </li>
+        <li class="bold">
+            <a href="{{route('backoffice.user.index')}}" class="waves-effect waves-cyan">
+                <i class="material-icons">group</i>
+                <span class="nav-text">Usuarios del sistema</span>
             </a>
         </li>
         <li class="bold">
@@ -50,6 +54,7 @@
                 <span class="nav-text">Permisos del sistema</span>
             </a>
         </li>
+        
         </ul>
     </li>
     </ul>

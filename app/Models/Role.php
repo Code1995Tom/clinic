@@ -42,5 +42,11 @@ class Role extends Model
         ]);
         
     }
+
+    //VALIDACIONES
+
+    //RECUPERACION DE INFORMACION
+
+    //OTRAS OPERACIONES
 }
 

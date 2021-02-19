@@ -45,4 +45,10 @@ class Permission extends Model
         ]);
         //No olvidarse del alerta de actualizacion.
     }
+
+    //VALIDACIONES
+
+    //RECUPERACION DE INFORMACION
+
+    //OTRAS OPERACIONES
 }
